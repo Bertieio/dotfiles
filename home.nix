@@ -2,13 +2,14 @@
   config,
   pkgs,
   pkgs-unstable,
+  userSettings,
   ...
 }: {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home = {
-    username = "fauna";
-    homeDirectory = "/home/fauna";
+    username = userSettings.username;
+    homeDirectory = "/home/"+userSettings.username;
     stateVersion = "23.11"; # Please read the comment before changing.
     packages = [
       pkgs.alejandra

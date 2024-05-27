@@ -1,7 +1,7 @@
-{pkgs, ...}: {
+{pkgs, userSettings,...}: {
   programs.git = {
     enable = true;
-    userName = "Bertie";
-    userEmail = "b@bertie.io";
+    userName = userSettings.name;
+    userEmail = userSettings.email;
   };
 }

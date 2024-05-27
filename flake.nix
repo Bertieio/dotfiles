@@ -10,17 +10,31 @@ inputs = {
 };
 
 outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
-  let 
+  let
+    systemSettings = {
+      system = "x86_64-linux";
+      hostname = "CerealKiller";
+    };
+    userSettings = {
+      username = "fauna";
+      name = "Bertie";
+      email = "b@bertie.io";
+      editor = "neovim";
+    };
     lib = nixpkgs.lib; 
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
-    pkgs-unstable = nixpkgs-unstable.legacyPackages.${system}; 
+    pkgs = nixpkgs.legacyPackages.${systemSettings.system};
+    pkgs-unstable = nixpkgs-unstable.legacyPackages.${systemSettings.system}; 
   in
   {
    nixosConfigurations = {
-      CerealKiller = lib.nixosSystem {
-      inherit system;
-      modules = [./configuration.nix];
+    CerealKiller = lib.nixosSystem {
+        system = systemSettings.system;
+        modules = [./configuration.nix];
+        specialArgs = {
+          inherit systemSettings;
+          inherit userSettings;
+          inherit pkgs-unstable; 
+        };
       };
    };
    homeConfigurations = {
@@ -30,6 +44,7 @@ outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
       extraSpecialArgs = 
         {
           inherit pkgs-unstable;
+          inherit userSettings;
         };
       };
     };
