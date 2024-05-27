@@ -17,7 +17,7 @@
     file = {
     };
     sessionVariables = {
-      EDITOR = "nvim";
+      EDITOR = userSettings.editor;
     };
   };
   imports = [
