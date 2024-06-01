@@ -17,7 +17,7 @@ outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
       timezone = "Europe/London";
       bootMode = "bios";
       bootMountPath = "";
-      grubDevice = "/dev/sda"
+      grubDevice = "/dev/sda";
 
     };
     userSettings = {
