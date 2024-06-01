@@ -33,7 +33,7 @@ outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
   {
    nixosConfigurations = {
     system = lib.nixosSystem {
-        system = systemSettings.system;
+        LAB-NIX-NAS-01 = systemSettings.system;
         modules = [./configuration.nix];
         specialArgs = {
           inherit systemSettings;
