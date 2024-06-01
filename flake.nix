@@ -16,7 +16,7 @@ outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
       hostname = "LAB-NIX-NAS-01";
       timezone = "Europe/London";
       bootMode = "bios";
-      bootMountPath = "";
+      bootMountPath = "/";
       grubDevice = "/dev/sda";
 
     };
