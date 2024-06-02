@@ -19,6 +19,7 @@
       la = "ls -a";
     };
     bashrcExtra = ''
+      export TERM=xterm-256color
       PS1='\[$(tput setaf 168)\]\u@\h \[$(tput setaf 214)\]\w \[$(tput setaf 159)\]|-> \[$(tput setaf 183)\]'
     '';
   };
