@@ -25,6 +25,7 @@
         extraConfig = ''
             workgroup = WORKGROUP
             security = user
+            guest account = fauna
         '';
         shares = {
             Files = {
