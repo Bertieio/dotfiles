@@ -37,6 +37,36 @@
                 "force user" = "fauna";
                 "force group" = "bertieio";
             };
+            Photos = {
+                path = "/tank1/Photos";
+                browseable = "yes";
+                "read only" = "no";
+                "guest ok" = "no";
+                "create mask" = "0644";
+                "directory mask" = "0755";
+                "force user" = "fauna";
+                "force group" = "bertieio";
+            };
+            GameServers = {
+                path = "/tank1/GameServers";
+                browseable = "yes";
+                "read only" = "no";
+                "guest ok" = "no";
+                "create mask" = "0644";
+                "directory mask" = "0755";
+                "force user" = "fauna";
+                "force group" = "bertieio";
+            };
+            Media = {
+                path = "/tank1/Media";
+                browseable = "yes";
+                "read only" = "no";
+                "guest ok" = "no";
+                "create mask" = "0644";
+                "directory mask" = "0755";
+                "force user" = "fauna";
+                "force group" = "bertieio";
+            };
         };
     };
     services.samba-wsdd = {
