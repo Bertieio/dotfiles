@@ -20,7 +20,7 @@
 
     services.samba = {
         enable = true; 
-        securityGroup = "user";
+        securityType = "user";
         openFirewall = true;
         extraConfig = ''
             workgroup = WORKGROUP
