@@ -25,14 +25,13 @@
         extraConfig = ''
             workgroup = WORKGROUP
             security = user
-            guest account = fauna
         '';
         shares = {
             Files = {
                 path = "/tank1/Files";
                 browseable = "yes";
                 "read only" = "no";
-                "guest ok" = "yes";
+                "guest ok" = "no";
                 "create mask" = "0644";
                 "directory mask" = "0755";
                 "force user" = "fauna";
@@ -42,7 +41,7 @@
                 path = "/tank1/Photos";
                 browseable = "yes";
                 "read only" = "no";
-                "guest ok" = "yes";
+                "guest ok" = "no";
                 "create mask" = "0644";
                 "directory mask" = "0755";
                 "force user" = "fauna";
@@ -52,7 +51,7 @@
                 path = "/tank1/GameServers";
                 browseable = "yes";
                 "read only" = "no";
-                "guest ok" = "yes";
+                "guest ok" = "no";
                 "create mask" = "0644";
                 "directory mask" = "0755";
                 "force user" = "fauna";
@@ -62,7 +61,7 @@
                 path = "/tank1/Media";
                 browseable = "yes";
                 "read only" = "no";
-                "guest ok" = "yes";
+                "guest ok" = "no";
                 "create mask" = "0644";
                 "directory mask" = "0755";
                 "force user" = "fauna";
