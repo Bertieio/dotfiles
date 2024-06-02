@@ -18,4 +18,28 @@
     boot.zfs.devNodes = "/dev/disk/by-path";
     boot.zfs.extraPools = [ "tank1" ];
 
-    }
+    services.samba = {
+        enable = true; 
+        securityGroup = "user";
+        openFirewall = true;
+        extraConfig = ''
+            workgroup = WORKGROUP
+            security = user
+        '';
+        shares = {
+            Files = {
+                path = "/tank1/Files";
+                browseable = "yes";
+                "read only" = "no";
+                "guest ok" = "no";
+                "create mask" = "0644";
+                "directory mask" = "0755";
+                "force user" = "fauna";
+                "force group" = "bertieio";
+            };
+        };
+    };
+    services.samba-wsdd = {
+        enable = true;
+    };
+}
