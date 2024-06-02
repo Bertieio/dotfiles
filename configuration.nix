@@ -13,7 +13,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
   ] ++ 
-    (if(systemSettings.hostName == "LAB-NIX-NAS-01") 
+    (if(systemSettings.hostname == "LAB-NIX-NAS-01") 
       then [./system/nas.nix] 
       else "[]");
 
