@@ -12,7 +12,6 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./system/nas.nix
   ] ++ 
     (if(systemSettings.hostname == "LAB-NIX-NAS-01") 
       then [./system/nas.nix] 
