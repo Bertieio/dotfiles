@@ -16,4 +16,6 @@
         zfs
     ]; 
     boot.zfs.devNodes = "/dev/disk/by-path";
+    boot.zfs.extraPools = [ "tank1" ];
+
     }
