@@ -11,5 +11,5 @@
 }: {
     boot.supportedFilesystems = [ "zfs" ];
     boot.zfs.forceImportRoot = false;
-    networking.hostId = d6f3d1cf;
+    networking.hostId = "d6f3d1cf";
  }
