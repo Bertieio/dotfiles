@@ -12,7 +12,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-  ];
+  ] ++ if(systemSettings.hostName == "LAB-NIX-NAS-01") then [./system/nas.nix] else "[]";
 
   boot.loader.systemd-boot.enable = if (systemSettings.bootMode == "uefi") then true else false;
   boot.loader.efi.canTouchEfiVariables = if (systemSettings.bootMode == "uefi") then true else false;
