@@ -14,6 +14,6 @@
     networking.hostId = "d6f3d1cf";
     environment.systemPackages = with pkgs; [
         zfs
-        iftop
     ]; 
+    boot.zfs.devNodes = "/dev/disk/by-path";
     }

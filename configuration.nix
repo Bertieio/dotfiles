@@ -58,6 +58,7 @@
     tmux
     git
     zenith
+    iftop
   ];
 
 
