@@ -1,8 +1,6 @@
 {pkgs, pkgs-unstable, ...}:{
     programs.hyprland = {
         enable = true;
-        xwayland.hidpi = true;
-        xwayland.enable = true;
     };
     environment.sessionVariables = {
         NIXOS_OZONE_WL = "1";
