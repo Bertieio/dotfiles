@@ -41,6 +41,15 @@ outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
           inherit pkgs-unstable; 
         };
       };
+      CerealKiller = lib.nixosSystem {
+        system = systemSettings.system;
+        modules = [./configuration.nix];
+        specialArgs = {
+          inherit systemSettings;
+          inherit userSettings;
+          inherit pkgs-unstable; 
+        };
+      };
    };
    homeConfigurations = {
       fauna = home-manager.lib.homeManagerConfiguration {
