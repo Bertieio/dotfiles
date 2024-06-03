@@ -27,7 +27,7 @@ outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
    nixosConfigurations = {
     LAB-NIX-NAS-01 = lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [./hosts/LAB-NIX-NAS-01.nix];
+        modules = [./hosts/LAB-NIX-NAS-01/configuration.nix];
         specialArgs = {
           inherit userSettings;
           inherit pkgs-unstable; 
