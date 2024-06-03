@@ -35,7 +35,7 @@ outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
       };
       CerealKiller = lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [./hosts/CerealKiller.nix];
+        modules = [./hosts/CerealKiller/configuration.nix];
         specialArgs = {
           inherit userSettings;
           inherit pkgs-unstable; 
