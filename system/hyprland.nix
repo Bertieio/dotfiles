@@ -1,4 +1,4 @@
-{pkgs, pkgs-unstable}:{
+{pkgs, pkgs-unstable, ...}:{
     programs.hyprland = {
         enable = true;
         xwayland.hidpi = true;
