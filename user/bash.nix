@@ -3,14 +3,9 @@
     enable = true;
     shellAliases = {
       hmsw = "home-manager switch --flake ~/.dotfiles/";
-      hmed = "vim ~/.dotfiles/home.nix";
 
       nxsw = "sudo nixos-rebuild switch --flake ~/.dotfiles";
-      nxed = "vim ~/.dotfiles/configuration.nix";
-
-      #fkrl = "nix flake update";
-      fked = "vim ~/.dotfiles/flake.nix";
-
+      
       cddot = "cd ~/.dotfiles";
       cdds = "cd ~/.dotfiles/system";
       cddu = "cd ~/.dotfiles/user";

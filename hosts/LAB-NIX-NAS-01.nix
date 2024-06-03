@@ -17,7 +17,7 @@
   boot.loader.systemd-boot.enable = false;
   boot.loader.efi.canTouchEfiVariables =  false;
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda" # does nothing if running uefi rather than bios
+  boot.loader.grub.device = "/dev/sda"; # does nothing if running uefi rather than bios
 
   networking = {
     hostName = "LAB-NIX-NAS-01"; # Define your hostname.
