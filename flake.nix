@@ -11,13 +11,8 @@ inputs = {
 
 outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
   let
-    systemSettings = {
-      timezone = "Europe/London";
-      bootMode = "bios";
-      bootMountPath = "/";
-      grubDevice = "/dev/sda";
-
-    };
+    system = "x86_64-linux";
+  
     userSettings = {
       username = "fauna";
       name = "Bertie";
@@ -25,8 +20,8 @@ outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
       editor = "neovim";
     };
     lib = nixpkgs.lib; 
-    pkgs = nixpkgs.legacyPackages.${systemSettings.system};
-    pkgs-unstable = nixpkgs-unstable.legacyPackages.${systemSettings.system}; 
+    pkgs = nixpkgs.legacyPackages.${system};
+    pkgs-unstable = nixpkgs-unstable.legacyPackages.${system}; 
   in
   {
    nixosConfigurations = {
@@ -40,9 +35,8 @@ outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
       };
       CerealKiller = lib.nixosSystem {
         system = "x86_64-linux";
-        modules = [./configuration.nix];
+        modules = [./hosts/CerealKiller.nix];
         specialArgs = {
-          inherit systemSettings;
           inherit userSettings;
           inherit pkgs-unstable; 
         };

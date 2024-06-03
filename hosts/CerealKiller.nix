@@ -10,17 +10,14 @@
 }: {
   imports = [
     # Include the results of the hardware scan.
-    /etc/nixos/hardware-configuration.nix
-    ../system/nas.nix
-  ];
+      /etc/nixos/hardware-configuration.nix
+      ]; 
 
-  boot.loader.systemd-boot.enable = false;
-  boot.loader.efi.canTouchEfiVariables =  false;
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda"; # does nothing if running uefi rather than bios
-
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true ;
+  
   networking = {
-    hostName = "LAB-NIX-NAS-01"; # Define your hostname.
+    hostName = systemSettings.hostname; # Define your hostname.
     networkmanager.enable = true; # Easiest to use and most distros use this by default.
     firewall.enable = false;
   };
@@ -36,8 +33,8 @@
   };
 
   # Enable sound.
-  sound.enable = false;
-  hardware.pulseaudio.enable = false;
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${userSettings.username} = {
@@ -59,7 +56,6 @@
 
   services.tailscale = {
     enable = true;
-
   };
   services.openssh.enable = true;
   system.stateVersion = "23.11"; # Did you read the comment?
