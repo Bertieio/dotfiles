@@ -12,8 +12,6 @@ inputs = {
 outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
   let
     systemSettings = {
-      system = "x86_64-linux";
-      hostname = "LAB-NIX-NAS-01";
       timezone = "Europe/London";
       bootMode = "bios";
       bootMountPath = "/";
@@ -33,16 +31,15 @@ outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
   {
    nixosConfigurations = {
     LAB-NIX-NAS-01 = lib.nixosSystem {
-        system = systemSettings.system;
-        modules = [./configuration.nix];
+        system = "x86_64-linux";
+        modules = [./hosts/LAB-NIX-NAS-01.nix];
         specialArgs = {
-          inherit systemSettings;
           inherit userSettings;
           inherit pkgs-unstable; 
         };
       };
       CerealKiller = lib.nixosSystem {
-        system = systemSettings.system;
+        system = "x86_64-linux";
         modules = [./configuration.nix];
         specialArgs = {
           inherit systemSettings;
