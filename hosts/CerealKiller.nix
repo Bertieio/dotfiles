@@ -17,7 +17,7 @@
   boot.loader.efi.canTouchEfiVariables = true ;
   
   networking = {
-    hostName = systemSettings.hostname; # Define your hostname.
+    hostName = "CerealKiller"; # Define your hostname.
     networkmanager.enable = true; # Easiest to use and most distros use this by default.
     firewall.enable = false;
   };
