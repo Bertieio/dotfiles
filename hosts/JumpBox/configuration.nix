@@ -20,7 +20,7 @@
   boot.loader.grub.device = "/dev/sda";
   
   networking = {
-    hostName = "CerealKiller"; # Define your hostname.
+    hostName = "JumpBox"; # Define your hostname.
     networkmanager.enable = true; # Easiest to use and most distros use this by default.
     firewall.enable = false;
   };
