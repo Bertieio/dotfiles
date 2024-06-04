@@ -41,6 +41,14 @@ outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
           inherit pkgs-unstable; 
         };
       };
+      JumpBox = lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [./hosts/JumpBox/configuration.nix];
+        specialArgs = {
+          inherit userSettings;
+          inherit pkgs-unstable; 
+        };
+      };
    };
    homeConfigurations = {
       fauna = home-manager.lib.homeManagerConfiguration {
