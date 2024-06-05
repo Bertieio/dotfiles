@@ -4,9 +4,9 @@
         settings = {
         };
         extraConfig = ''
-            bind=SUPER,SPACE,rofi,-show drun
-            bind=SUPER,Q,kitty
-            bind=SUPER,M,hyprctl,dispatch exit
+            bind=SUPER,SPACE,exec,rofi -show drun
+            bind=SUPER,Q,exec,kitty
+            bind=SUPER,M,exec,hyprctl dispatch exit
         '';
     };
 }
