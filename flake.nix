@@ -40,7 +40,6 @@ outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
         specialArgs = {
           inherit userSettings;
           inherit pkgs-unstable;
-          inherit inputs; 
         };
       };
       JumpBox = lib.nixosSystem {
