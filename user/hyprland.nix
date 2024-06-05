@@ -5,6 +5,6 @@
         };
         extraConfig = ''
             bind=SUPER,SPACE, rofi -show drun
-        ''
-    }
+        '';
+    };
 }
