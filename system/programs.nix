@@ -6,5 +6,7 @@
     git
     zenith
     iftop
+    btop
+    bottom
   ];
   }
