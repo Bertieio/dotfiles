@@ -9,7 +9,7 @@
       cddot = "cd ~/.dotfiles";
       cdds = "cd ~/.dotfiles/system";
       cddu = "cd ~/.dotfiles/user";
-           
+      
       ".." = "cd ..";
       la = "ls -a";
     };
