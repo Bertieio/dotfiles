@@ -2,7 +2,9 @@
     wayland.windowManager.hyprland = {
         enable = true; 
         settings = {
-            bind=SUPER,SPACE, rofi -show drun
         };
+        extraConfig = ''
+            bind=SUPER,SPACE, rofi -show drun
+        ''
     }
 }
