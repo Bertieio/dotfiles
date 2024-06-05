@@ -3,10 +3,11 @@
 description = "Flakey!";
 
 inputs = {
-   nixpkgs.url = "nixpkgs/nixos-24.05";
-   nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
-   home-manager.url = "github:nix-community/home-manager/release-24.05";
-   home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs.url = "nixpkgs/nixos-24.05";
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
+    home-manager.url = "github:nix-community/home-manager/release-24.05";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    hyprland.url = "github:hyprwm/Hyprland";
 };
 
 outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
@@ -24,7 +25,7 @@ outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
     pkgs-unstable = nixpkgs-unstable.legacyPackages.${system}; 
   in
   {
-   nixosConfigurations = {
+    nixosConfigurations = {
     LAB-NIX-NAS-01 = lib.nixosSystem {
         system = "x86_64-linux";
         modules = [./hosts/LAB-NIX-NAS-01/configuration.nix];
@@ -49,8 +50,8 @@ outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
           inherit pkgs-unstable; 
         };
       };
-   };
-   homeConfigurations = {
+    };
+    homeConfigurations = {
       fauna = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       modules = [./home.nix];
