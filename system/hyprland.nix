@@ -14,7 +14,7 @@
         ];
     };
     environment.systemPackages = with pkgs; [
-        hyprland
+        eww
         swww
         xdg-desktop-portal-gtk
         xdg-desktop-portal-hyprland
