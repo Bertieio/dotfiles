@@ -12,6 +12,8 @@
     # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../system/hyprland.nix
+      ../../system/programs.nix
+
       ]; 
 
   boot.loader.systemd-boot.enable = false;

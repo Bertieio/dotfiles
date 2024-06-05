@@ -12,6 +12,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./system/programs.nix
   ] ++ 
     (if(systemSettings.hostname == "LAB-NIX-NAS-01") 
       then [./system/nas.nix] 
@@ -51,15 +52,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    htop
-    tmux
-    git
-    zenith
-    iftop
-  ];
+ 
 
   services.tailscale = {
     enable = true;
