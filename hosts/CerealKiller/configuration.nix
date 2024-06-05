@@ -53,6 +53,7 @@
     git
     zenith
     iftop
+    btop
   ];
 
   services.tailscale = {
