@@ -4,7 +4,7 @@
         settings = {
         };
         extraConfig = ''
-            bind=SUPER,SPACE,rofi -show drun
+            bind=SUPER,SPACE,rofi,-show drun
         '';
     };
 }
