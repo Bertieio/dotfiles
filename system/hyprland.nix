@@ -19,5 +19,7 @@
         xdg-desktop-portal-gtk
         xdg-desktop-portal-hyprland
         xwayland
+        kitty
+        rofi-wayland
     ];
 }
