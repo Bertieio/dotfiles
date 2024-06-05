@@ -1,7 +1,7 @@
-{pkgs, pkgs-unstable, inputs, ...}:{
+{pkgs, pkgs-unstable, hyprland, ...}:{
     programs.hyprland = {
         enable = true;
-        package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+        package = hyprland.packages."${pkgs.system}".hyprland;
     };
 /*     environment.sessionVariables = {
         WLR_RENDERER_ALLOW_SOFTWARE = "1";
