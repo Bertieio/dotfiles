@@ -39,7 +39,8 @@ outputs = {self, nixpkgs, nixpkgs-unstable, home-manager,...}:
         modules = [./hosts/CerealKiller/configuration.nix];
         specialArgs = {
           inherit userSettings;
-          inherit pkgs-unstable; 
+          inherit pkgs-unstable;
+          inherit inputs; 
         };
       };
       JumpBox = lib.nixosSystem {
