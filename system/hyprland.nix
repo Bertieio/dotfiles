@@ -3,7 +3,7 @@
         enable = true;
         #package = inputs.hyprland.packages."${pkgs.system}".hyprland;
     };
-/*     environment.sessionVariables = {
+    environment.sessionVariables = {
         WLR_RENDERER_ALLOW_SOFTWARE = "1";
     };
     services.dbus.enable = true;
@@ -13,7 +13,7 @@
         extraPortals = [
             pkgs.xdg-desktop-portal-gtk
         ];
-    }; */
+    };
     environment.systemPackages = with pkgs; [
         eww
         swww
