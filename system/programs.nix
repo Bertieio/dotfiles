@@ -8,5 +8,8 @@
     iftop
     btop
     bottom
+    vscode
+    firefox
   ];
+    nixpkgs.config.allowUnfree = true;
   }
