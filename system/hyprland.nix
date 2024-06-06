@@ -22,5 +22,6 @@
         xwayland
         kitty
         rofi-wayland
+        dunst
     ];
 }
