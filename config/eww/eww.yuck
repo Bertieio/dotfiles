@@ -6,7 +6,7 @@
     :geometry (geometry
         :width "100%"
         :height "10%")
-        (box: orientation "vertical" :class "bx"
+        (box: :orientation "vertical" :class "bx"
         (button :onclick "notify-send Hello")
         (label :text "Hello World!")
     )
