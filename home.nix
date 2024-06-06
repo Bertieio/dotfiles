@@ -26,6 +26,7 @@
     ./user/tmux.nix
     ./user/git.nix
     ./user/hyprland.nix
+    ./user/config.nix
   ];
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
